@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workwise Navigator</title>
+    <link rel="stylesheet" href="../Css/login_persona.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="website icon" href="../Imagenes/wknlogo2.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../Css/loader.css">
+    <link rel="stylesheet" href="../Css/contraseña_olvidada.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <img src="../Imagenes/wknname.png" alt="Logo" id="logo" class="logo">
+        </div>
+    </header>
+    <main>
+        <div class="login-form">
+            <div class="image-container">
+                <img src="../Imagenes/imagenperfil.png" alt="Imagen de encabezado">
+            </div>
+            <h1>Recuperar Contraseña</h1>
+            <form>
+                <input class="submit" type="email" placeholder="Correo electrónico" required>
+                <div id="captcha-box">
+                    <div id="captcha"></div>
+                </div>
+                <input type="text" placeholder="Captcha" required>
+                <br>
+                <button type="submit" class="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        // Función para generar un captcha aleatorio
+        function generateCaptcha() {
+            var captcha = "";
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < 6; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+
+            return captcha;
+        }
+
+        // Generar el captcha al cargar la página
+        document.getElementById("captcha").innerText = generateCaptcha();
+    </script>
+    <div id="loaderContainer" class="loader-container">
+        <div id="loader" class="loader"></div>
+    </div>
+    <script src="../js/carga.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#0a1128;
+    color: white;
+    padding: 10px 20px;
+}
+
+#logo {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s; 
+}
+
+#logo:hover {
+    transform: scale(1.1); 
+}
+
+h1{
+    background: linear-gradient(90deg, #034078, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttons button {
+    margin-left: 10px;
+    padding: 15px 25px;
+    background-color: #034078;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.buttons button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.login-form {
+    max-width: 300px;
+    margin: 20px auto 50px; 
+    padding: 30px;
+    border: 3px solid black;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 15px 20px;
+    background-color: #001f54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #034078;
+}
+
+.login-form a {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-form a:hover {
+    color: #555;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 93%;
+}
+
+.password-field .toggle-password {
+    position: absolute;
+    top: 43%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workwise Navigator</title>
+    <link rel="stylesheet" href="../Css/inicio.css">
+    <link rel="stylesheet" href="../Css/loader.css">
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link rel="website icon" href="../Imagenes/wknlogo2.png">
+</head>
+
+<body>
+    <header>
+        <!-- Barra superior con el logo -->
+        <div class="top-bar">
+            <img src="../Imagenes/wknname.png" alt="Logo" id="logo" class="logo">
+        </div>
+    </header>
+    <main>
+        <!-- Contenido principal -->
+        <div class="container">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="toggle" onclick="toggleSidebar()">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+            <!-- Barra lateral -->
+            <div class="sidebar">
+                <h2>Menú</h2>
+
+                <ul>
+                    <!-- Elementos del menú -->
+                    <li><button class="loginPersona">Iniciar Sesión</button></li>
+                    <li><button class="RegistroPersona">Registrarse</button></li>
+                    <li><button onclick="location.href='#';">Mi Perfil</button></li>
+                    <li><button onclick="location.href='#';">Mi Hoja de Vida</button></li>
+                </ul>
+            </div>
+            <!-- Lista de trabajos -->
+            <div class="job-list">
+                <div class="job" onclick="showDetails(1)">
+                    <h3>Desarrollador Web</h3>
+                    <p>Empresa X</p>
+                </div>
+                <div class="job" onclick="showDetails(2)">
+                    <h3>Diseñador Gráfico</h3>
+                    <p>Empresa Y</p>
+                </div>
+                <div class="job" onclick="showDetails(3)">
+                    <h3>Contador</h3>
+                    <p>Empresa Z</p>
+                </div>
+                <div class="job" onclick="showDetails(4)">
+                    <h3>Matematologo</h3>
+                    <p>Empresa J</p>
+                </div>
+            </div>
+            <!-- Detalles del trabajo -->
+            <div class="details">
+                <button class="close" onclick="hideDetails()">X</button>
+                <h2>Detalles de la Oferta</h2>
+                <div id="job-details"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Efecto de carga -->
+    <div id="loaderContainer" class="loader-container">
+        <div id="loader" class="loader"></div>
+    </div>
+    <!-- Script de JavaScript -->
+    <script src="../js/carga.js"></script>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+
+            var jobList = document.querySelector('.job-list');
+            jobList.classList.toggle('sidebar-open');
+        }
+
+        // Función para mostrar los detalles de un trabajo
+        function showDetails(jobId) {
+            var jobDetails = document.getElementById("job-details");
+            if (jobId === 1) {
+                jobDetails.innerHTML = "<p>Descripción del trabajo para Desarrollador Web</p>";
+            } else if (jobId === 2) {
+                jobDetails.innerHTML = "<p>Descripción del trabajo para Diseñador Gráfico</p>";
+            } else if (jobId === 3) {
+                jobDetails.innerHTML = "<p>Descripción del trabajo para Contador</p>";
+            } else if (jobId === 4) {
+                jobDetails.innerHTML = "<p>Descripción del trabajo para Matematologo</p>";
+            }
+            // Mostrar los detalles del trabajo
+            document.querySelector(".details").style.display = "block";
+        }
+
+        // Función para ocultar los detalles del trabajo
+        function hideDetails() {
+            document.querySelector(".details").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

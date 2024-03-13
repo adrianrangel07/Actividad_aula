@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a1128;
+    color: white;
+    padding: 10px 20px;
+}
+
+#logo {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    background: linear-gradient(90deg, #034078, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttons button {
+    margin-left: 10px;
+    padding: 15px 25px;
+    background-color: #034078;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.buttons button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.register-form {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 3px solid black;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+}
+
+.register-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form button {
+    padding: 15px 20px;
+    background-color: #001f54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.register-form button:hover {
+    background-color: #034078;
+}

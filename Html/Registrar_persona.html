@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workwise Navigator</title>
+    <link rel="stylesheet" href="../Css/registrar_persona.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="website icon" href="../Imagenes/wknlogo2.png">
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link rel="stylesheet" href="../Css/loader.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <img src="../Imagenes/wknname.png" alt="Logo" id="logo" class="logo">
+            <div class="buttons">
+                <button class="loginPersona" type="button">INICIAR SESIÓN</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="register-form">
+            <h1>REGISTRARSE</h1>
+            <form>
+                <input type="text" placeholder="Nombre(s)" required>
+                <input type="text" placeholder="Apellido(s)" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="text" placeholder="Dirección" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Confirmar Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </main>
+    <div id="loaderContainer" class="loader-container">
+        <div id="loader" class="loader"></div>
+    </div>
+    <script src="../js/carga.js"></script>
+</body>
+</html>
