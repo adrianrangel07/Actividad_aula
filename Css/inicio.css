@@ -13,6 +13,7 @@ body {
 .sidebar h2 {
     text-align: center;
     user-select: none;
+    margin-bottom: 45px;
 }
 
 .sidebar {
@@ -60,7 +61,7 @@ body {
 }
 
 .sidebar ul li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     
 }
 
