@@ -36,7 +36,7 @@
                     <li><button class="RegistroPersona">REGISTRARSE</button></li>
                     <li><button class="#">ESTADISTICAS</button></li>
                     <li><button class="#">APRENDE CON NOSOTROS</button></li>
-                 </ul>
+                </ul>
             </div>
             <!-- Lista de trabajos -->
             <div class="job-list">
@@ -62,11 +62,9 @@
                 <button class="close" onclick="hideDetails()">X</button>
                 <h2>Detalles de la Oferta</h2>
                 <div id="job-details"></div>
-                <!-- Este boton hay que ponerlo mas abajo y centrado -->
-                <div class="postularse-boton">
-                    <button>Postularse</button> 
+                <div class="postularse-container">
+                    <button onclick="postularse()">Postularse</button>
                 </div>
-                <!-- para que sepan -->
             </div>
         </div>
     </main>
@@ -104,6 +102,11 @@
         // Función para ocultar los detalles del trabajo
         function hideDetails() {
             document.querySelector(".details").style.display = "none";
+        }
+
+        //Funcion para mostrar el mensaje postulado correctamente luego de postularse
+        function postularse() {
+            alert("¡Postulado correctamente!");
         }
 
     </script>
